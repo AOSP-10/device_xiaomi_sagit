@@ -30,9 +30,6 @@ $(call inherit-product-if-exists, vendor/apps/firmware-sagit/config.mk)
 # GooglePinYin
 $(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
 
-# MiuiCamera
-$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
-
 PRODUCT_NAME := aosp_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
