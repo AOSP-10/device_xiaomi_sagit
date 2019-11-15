@@ -28,10 +28,9 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# ViaBrowser
+# Lineage Jelly
 PRODUCT_PACKAGES += \
-    ViaBrowser \
-    Calendar2
+    Jelly
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
