@@ -31,5 +31,9 @@ PRODUCT_PACKAGES += \
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
 
+# SPN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/sagit/sagit-vendor.mk)
