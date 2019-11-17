@@ -27,11 +27,28 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Firmware
 $(call inherit-product-if-exists, vendor/apps/firmware-sagit/config.mk)
 
-# GooglePinYin
-$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
+# GoogleCamera
+$(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
 
 # IFAA
 $(call inherit-product-if-exists, vendor/apps/IFAA/config.mk)
+
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# OTA
+CUSTOM_OTA_VERSION_CODE := ten
+
+CUSTOM_PROPERTIES += \
+    org.pixelexperience.ota.version_code=$(CUSTOM_OTA_VERSION_CODE) \
+    sys.ota.disable_uncrypt=1
+
+PRODUCT_PACKAGES += \
+    Updates
+
+PRODUCT_COPY_FILES += \
+    vendor/aosp/config/permissions/org.pixelexperience.ota.xml:system/etc/permissions/org.pixelexperience.ota.xml
 
 PRODUCT_NAME := aosp_sagit
 PRODUCT_DEVICE := sagit

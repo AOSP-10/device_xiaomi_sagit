@@ -15,5 +15,9 @@ TARGET_OTA_ASSERT_DEVICE := sagit
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
+SELINUX_IGNORE_NEVERALLOWS := true
+endif
+
 # Inherit from proprietary files
 include vendor/xiaomi/sagit/BoardConfigVendor.mk
