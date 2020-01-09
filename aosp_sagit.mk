@@ -30,8 +30,8 @@ $(call inherit-product-if-exists, vendor/apps/firmware-sagit/config.mk)
 # GoogleCamera
 $(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
 
-# IFAA
-$(call inherit-product-if-exists, vendor/apps/IFAA/config.mk)
+# ScreenRecorder
+$(call inherit-product-if-exists, vendor/apps/OPScreenRecord/config.mk)
 
 # Wallpaper
 $(call inherit-product-if-exists, vendor/apps/LiveWallpaper/config.mk)
