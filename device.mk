@@ -28,6 +28,9 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
+# MiuiCamera
+$(call inherit-product, vendor/apps/MiuiCamera/config.mk)
+
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
 
