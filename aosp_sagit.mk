@@ -33,6 +33,9 @@ $(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
 # ScreenRecorder
 $(call inherit-product-if-exists, vendor/apps/OPScreenRecord/config.mk)
 
+# Wallpaper
+$(call inherit-product-if-exists, vendor/apps/LiveWallpaper/config.mk)
+
 # Gapps
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
