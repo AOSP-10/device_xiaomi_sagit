@@ -1,3 +1,15 @@
+# Firmware
+$(call inherit-product, vendor/apps/firmware-sagit/config.mk)
+
+# GooglePinYin
+$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
+
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
+
+# ScreenRecorder
+$(call inherit-product-if-exists, vendor/apps/OPScreenRecord/config.mk)
+
 # AAPT
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
