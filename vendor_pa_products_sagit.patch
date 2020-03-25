@@ -1,0 +1,68 @@
+diff --git a/products/sagit/pa.dependencies b/products/sagit/pa.dependencies
+index 1eb3b4c..9d4fe26 100644
+--- a/products/sagit/pa.dependencies
++++ b/products/sagit/pa.dependencies
+@@ -1,44 +1,26 @@
+ [
+-    {
+-        "remote":       "aospa",
+-        "repository":   "AOSPA/android_device_xiaomi_sagit",
+-        "target_path":  "device/xiaomi/sagit",
+-        "revision":     "pie"
+-    },
+-    {
+-        "remote":       "aospa",
+-        "repository":   "AOSPA/android_kernel_xiaomi_msm8998",
+-        "target_path":  "kernel/xiaomi/msm8998",
+-        "revision":     "pie"
+-    },
+-    {
+-        "remote":       "blobs",
+-        "repository":   "proprietary_vendor_xiaomi",
+-        "target_path":  "vendor/xiaomi",
+-        "revision":     "pie"
+-    },
+     {
+         "remote":       "blobs",
+         "repository":   "proprietary_vendor_qcom_common",
+         "target_path":  "vendor/qcom/common",
+-        "revision":     "pie"
++        "revision":     "quartz"
+     },
+     {
+         "remote":       "aospa",
+         "repository":   "AOSPA/android_hardware_qcom_audio",
+-        "target_path":  "hardware/qcom/audio",
+-        "revision":     "pie-8998"
++        "target_path":  "vendor/qcom/opensource/audio-hal/primary-hal",
++        "revision":     "quartz-8998"
+     },
+     {
+         "remote":       "aospa",
+         "repository":   "AOSPA/android_hardware_qcom_display",
+         "target_path":  "hardware/qcom/display",
+-        "revision":     "pie-8998"
++        "revision":     "quartz-8998"
+     },
+     {
+         "remote":       "aospa",
+         "repository":   "AOSPA/android_hardware_qcom_media",
+         "target_path":  "hardware/qcom/media",
+-        "revision":     "pie-8998"
++        "revision":     "quartz-8998"
+     }
+ ]
+diff --git a/products/sagit/pa_sagit.mk b/products/sagit/pa_sagit.mk
+index ae054f3..b238c31 100644
+--- a/products/sagit/pa_sagit.mk
++++ b/products/sagit/pa_sagit.mk
+@@ -38,6 +38,7 @@ PRODUCT_MANUFACTURER := Xiaomi
+ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+ 
+ PRODUCT_BUILD_PROP_OVERRIDES += \
+-    BUILD_FINGERPRINT=Xiaomi/sagit/sagit:8.0.0/OPR1.170623.027/V9.5.8.0.OCAMIFA:user/release-keys \
+-    PRIVATE_BUILD_DESC="sagit-user 8.0.0 OPR1.170623.027 V9.5.8.0.OCAMIFA release-keys"
++    PRIVATE_BUILD_DESC="sagit-user 8.0.0 OPR1.170623.027 V9.2.3.0.OCAMIEK release-keys"
++
++BUILD_FINGERPRINT := Xiaomi/sagit/sagit:8.0.0/OPR1.170623.027/V9.2.3.0.OCAMIEK:user/release-keys
+ endif
