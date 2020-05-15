@@ -25,10 +25,13 @@ $(call inherit-product, device/xiaomi/sagit/device.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Firmware
-$(call inherit-product-if-exists, vendor/apps/firmware-sagit/config.mk)
+$(call inherit-product, vendor/apps/firmware-sagit/config.mk)
 
 # GoogleCamera
 $(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
+
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
 # ScreenRecorder
 $(call inherit-product-if-exists, vendor/apps/OPScreenRecord/config.mk)
